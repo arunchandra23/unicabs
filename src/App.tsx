@@ -75,7 +75,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:8000/submitRequest", {
+      const response = await fetch("https://unicabs-api.onrender.com/submitRequest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
