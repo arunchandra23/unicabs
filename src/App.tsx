@@ -1,6 +1,3 @@
-// import './App.css'
-import Home from "./pages/Home";
-import React, { useState } from "react";
 import { DatePicker, TimePicker, notification } from "antd";
 import backgroundImage from "./assets/back.png";
 import { RangePickerProps } from "antd/es/date-picker";
@@ -30,11 +27,11 @@ function App() {
   const disabledDate: RangePickerProps["disabledDate"] = (current) => {
     return current < dayjs().startOf("day");
   };
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     console.log(formData);
     const { id, value } = e.target;
     if (id === "uniShare" || id === "uniGo") {
-      setFormData((prevFormData) => ({
+      setFormData((prevFormData:any) => ({
         ...prevFormData,
         type: value,
       }));
